@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Schmarzt - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .flex-container-symptom {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0px 10px;
+        margin: 5px 0px 0px 0px;
+      }
+
+      #symptoms-list {
+        margin-bottom: 10px;
+      }
+
+      #checkbox-symptom {
+        border: 1px solid;
+        margin-bottom: 30px;
+      }
+
+      .symptoms-group {
+        width: 150px;
+        margin: 5px 0px;
+      }
+
+      #navigation {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="flex-container">
+        <div class="header">
+          <h1>Schmarzt</h1>
+          <h3><i>Besser als Dr. Google</i></h3>
+        </div>
+
+        <div class="grid-container menu">
+          <a href="index.html">Home</a>
+          <a href="krankheiten.html">Krankheiten-Liste</a>
+          <a href="index.html">...</a>
+        </div>
+   
+      <div class="content">
+        <p>
+            Diese Webseite dient dazu, anhand von Ihnen eingegebener Symptome eine Krankheit zu ermitteln, an der Sie leiden.
+        </p>
+
+        Geben Sie die für Sie zutreffenden Symptome ein:
+        <form>
+          <div id="symptoms-list">
+            <input list="symptoms">
+            <datalist id="symptoms">
+              <option value="Fieber">
+              <option value="Gliederschmerzen">
+              <option value="Husten">
+              <option value="Schnupfen">
+            </datalist>
+            <input type="button" value="Symptom hinzufügen">
+          </div>
+
+          <br>
+
+          Oder kreuzen Sie die Symptome von der angegebenen Liste an:
+          <div id="checkbox-symptom">
+            <div class="flex-container-symptom">
+                <span class="symptoms-group">
+                  <input type="checkbox">
+                  <label>Amnesie</label> <br>
+                
+                  <input type="checkbox">
+                  <label>Anämie</label> <br>
+                
+                  <input type="checkbox">
+                  <label>Augenringe</label> <br>
+                
+                  <input type="checkbox">
+                  <label>Augenschmerzen</label> <br>
+                </span>
+                <span class="symptoms-group">
+                  <input type="checkbox">
+                  <label>Ausfluss</label> <br>
+                
+                  <input type="checkbox">
+                  <label>Bauchschmerzen</label> <br>
+                
+                  <input type="checkbox">
+                  <label>Blähungen</label> <br>
+                
+                  <input type="checkbox">
+                  <label>Blut im Urin</label> <br>
+                </span>
+                <span class="symptoms-group">
+                  <input type="checkbox">
+                  <label>Durchfall</label> <br>
+
+                  <input type="checkbox">
+                  <label>Erbrechen</label> <br>
+ 
+                  <input type="checkbox">
+                  <label>Fieber</label> <br>
+                  
+                  <input type="checkbox">
+                  <label>Gelenkschmerzen</label> <br>
+                </span>
+                <span class="symptoms-group">
+                    <input type="checkbox">
+                    <label>Hautausschlag</label> <br>
+  
+                    <input type="checkbox">
+                    <label>Herzschmerzen</label> <br>
+   
+                    <input type="checkbox">
+                    <label>Hitzewallungen</label> <br>
+                    
+                    <input type="checkbox">
+                    <label>Hüftschmerzen</label> <br>
+                </span>
+                <span class="symptoms-group">
+                  <input type="checkbox">
+                  <label>Kalte Füße</label> <br>
+                
+                  <input type="checkbox">
+                  <label>Kalte Hände</label> <br>
+                
+                  <input type="checkbox">
+                  <label>Knieschmerzen</label> <br>
+                
+                  <input type="checkbox">
+                  <label>Kribbeln</label> <br>
+                </span>
+                <span class="symptoms-group">
+                  <input type="checkbox">
+                  <label>Müdigkeit</label> <br>
+                
+                  <input type="checkbox">
+                  <label>Mundgeruch</label> <br>
+                
+                  <input type="checkbox">
+                  <label>Mundtrockenheit</label> <br>
+                
+                  <input type="checkbox">
+                  <label>Mastodynie</label> <br>
+                </span>
+                <span class="symptoms-group">
+                  <input type="checkbox">
+                  <label>Nachtschweiß</label> <br>
+
+                  <input type="checkbox">
+                  <label>Nackenschmerzen</label> <br>
+ 
+                  <input type="checkbox">
+                  <label>Nasenbluten</label> <br>
+                  
+                  <input type="checkbox">
+                  <label>Nervosität</label> <br>
+                </span>
+                <span class="symptoms-group">
+                    <input type="checkbox">
+                    <label>Obstipation</label> <br>
+  
+                    <input type="checkbox">
+                    <label>Ohnmacht</label> <br>
+   
+                    <input type="checkbox">
+                    <label>Ohrenschmerzen</label> <br>
+                    
+                    <input type="checkbox">
+                    <label>Ohrgeräusche</label> <br>
+                </span>
+            </div> 
+
+    	      <br>
+
+            <div id="navigation">
+              <span>A bis O </span>
+              <span>-</span>
+          	  <a href=""> Next</a>
+            </div>
+          </div>
+
+          <button type="button" id="diagnose-button">
+            <script>
+              document.getElementById("diagnose-button").addEventListener("click", toDiagnose);
+              function toDiagnose() {
+                window.location.href="diagnose.html";
+              }
+            </script>
+            Weiter zur Diagnose
+          </button>
+        <form>
+      </div>
+
+      <div class="footer">
+        <hr>
+        <p>
+          Erstellt von Nele Bethmann, Ibo Finn Becker, Emilie Wagner, Yannic Henry Schalk, Nico Alexander
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
