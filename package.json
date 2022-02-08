@@ -1,0 +1,12 @@
+{
+  "name": "schmarzt-website",
+  "version": "1.0.0",
+  "description": "Schmarzt Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
